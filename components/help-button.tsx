@@ -42,7 +42,7 @@ export default function HelpButton() {
             </a>
           </div>
 
-          <button onClick={() => setIsOpen(false)} className="absolute top-2 right-2 text-white">
+          <button onClick={() => setIsOpen(false)} className="absolute top-2 right-2 text-black">
             <X size={16} />
           </button>
         </div>
