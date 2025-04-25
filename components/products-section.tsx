@@ -26,7 +26,7 @@ export default function ProductsSection() {
           <ProductCard
             image="/images/products/tenis-esportivo.jpg"
             title="Tênis Esportivo Premium"
-            price="149,90"
+            price="53,00"
             index={0}
           />
 
@@ -34,15 +34,15 @@ export default function ProductsSection() {
           <ProductCard
             image="/images/products/tenis-casual.jpg"
             title="Tênis Casual Masculino"
-            price="129,90"
+            price="65,00"
             index={1}
           />
 
           {/* Imagem: public/images/products/sapato.jpg */}
-          <ProductCard image="/images/products/sapato.jpg" title="Sapatênis Moderno" price="139,90" index={2} />
+          <ProductCard image="/images/products/sapato.jpg" title="Sapatênis Moderno" price="80,90" index={2} />
 
           {/* Imagem: public/images/products/sandalia.jpg */}
-          <ProductCard image="/images/products/sandalia.jpg" title="Sandália Feminina" price="99,90" index={3} />
+          <ProductCard image="/images/products/sandalia.jpg" title="Sandália Feminina" price="50,90" index={3} />
         </div>
 
         <div className="text-center">
