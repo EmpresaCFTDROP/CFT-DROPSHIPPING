@@ -1,6 +1,6 @@
 import type React from "react"
 import Link from "next/link"
-import { Zap, Instagram, Facebook, MessageSquare, Youtube } from "lucide-react"
+import { Zap, Instagram, Facebook, MessageSquare, Youtube } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -17,9 +17,21 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4">
-            <SocialLink href="https://www.instagram.com/cftdrop.com.br/" icon={<Instagram size={18} />} />
-            <SocialLink href="https://api.whatsapp.com/send/?phone=5516991486936&text&type=phone_number&app_absent=0" icon={<MessageSquare size={18} />} />
-            <SocialLink href="https://www.youtube.com/@CFTDROPSHIPPING-2023" icon={<Youtube size={18} />} />
+            <SocialLink 
+              href="https://www.instagram.com/cftdrop.com.br/" 
+              icon={<Instagram size={18} />} 
+              newTab={true} 
+            />
+            <SocialLink 
+              href="https://www.youtube.com/@CFTDROPSHIPPING-2023" 
+              icon={<Youtube size={18} />} 
+              newTab={true} 
+            />
+            <SocialLink 
+              href="https://wa.me/5516991486936" 
+              icon={<MessageSquare size={18} />} 
+              newTab={true} 
+            />
           </div>
         </div>
 
@@ -34,17 +46,19 @@ export default function Footer() {
 }
 
 interface SocialLinkProps {
-  href: string
-  icon: React.ReactNode
+  href: string;
+  icon: React.ReactNode;
+  newTab?: boolean;
 }
 
-function SocialLink({ href, icon }: SocialLinkProps) {
+function SocialLink({ href, icon, newTab = false }: SocialLinkProps) {
   return (
     <Link
       href={href}
       className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-light hover:bg-primary hover:text-white hover:translate-y-[-5px] transition-all duration-300"
+      {...(newTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {icon}
     </Link>
-  )
+  );
 }
