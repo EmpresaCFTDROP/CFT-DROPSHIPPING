@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { Menu, X, LogIn } from 'lucide-react'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -36,7 +36,7 @@ export default function Header() {
           ${
             isMobileMenuOpen
               ? "fixed inset-0 bg-dark/95 flex flex-col items-center justify-center z-50"
-              : "hidden md:block"
+              : "hidden md:flex items-center"
           }
         `}
         >
@@ -48,7 +48,7 @@ export default function Header() {
 
           <ul
             className={`
-            ${isMobileMenuOpen ? "flex flex-col items-center gap-6 text-xl" : "flex gap-5"}
+            ${isMobileMenuOpen ? "flex flex-col items-center gap-6 text-xl" : "flex gap-5 mr-4"}
           `}
           >
             <li>
@@ -97,11 +97,36 @@ export default function Header() {
               </Link>
             </li>
           </ul>
+
+          {!isMobileMenuOpen && (
+            <Link
+              href="https://cftdropshipping.com.br/login"
+              className="bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded-md transition-all duration-300 flex items-center gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LogIn size={18} />
+              <span>Fazer Login</span>
+            </Link>
+          )}
         </nav>
 
-        <button className="md:hidden text-light" onClick={() => setIsMobileMenuOpen(true)}>
-          <Menu size={24} />
-        </button>
+        {/* Botão de login para mobile */}
+        <div className="md:hidden flex items-center gap-2">
+          <Link
+            href="https://cftdropshipping.com.br/login"
+            className="bg-primary hover:bg-primary-dark text-white font-semibold py-1.5 px-3 rounded-md transition-all duration-300 flex items-center gap-1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LogIn size={16} />
+            <span className="text-sm">Login</span>
+          </Link>
+
+          <button className="text-light" onClick={() => setIsMobileMenuOpen(true)}>
+            <Menu size={24} />
+          </button>
+        </div>
       </div>
     </header>
   )
