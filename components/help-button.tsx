@@ -9,7 +9,7 @@ export default function HelpButton() {
   const router = useRouter()
 
   return (
-    <div className="fixed bottom-24 right-6 z-50">
+    <div className="fixed bottom-28 right-6 z-50">
       {isOpen && (
         <div className="bg-white rounded-lg shadow-xl p-4 mb-4 w-72 animate-fade-in">
           <div className="bg-primary text-white p-3 rounded-t-lg">
