@@ -39,10 +39,10 @@ export default function ProductsSection() {
           />
 
           {/* Imagem: public/images/products/sapato.jpg */}
-          <ProductCard image="/images/products/sapato.jpg" title="Sapatênis Moderno" price="80,90" index={2} />
+          <ProductCard image="/images/products/sapato.jpg" title="Sapatênis Moderno" price="80,00" index={2} />
 
           {/* Imagem: public/images/products/sandalia.jpg */}
-          <ProductCard image="/images/products/sandalia.jpg" title="Sandália Feminina" price="50,90" index={3} />
+          <ProductCard image="/images/products/sandalia.jpg" title="Sandália Feminina" price="50,00" index={3} />
         </div>
 
         <div className="text-center">
