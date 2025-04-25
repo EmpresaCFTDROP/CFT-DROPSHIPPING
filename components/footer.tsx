@@ -17,10 +17,9 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4">
-            <SocialLink href="#" icon={<Instagram size={18} />} />
-            <SocialLink href="#" icon={<Facebook size={18} />} />
-            <SocialLink href="#" icon={<MessageSquare size={18} />} />
-            <SocialLink href="#" icon={<Youtube size={18} />} />
+            <SocialLink href="https://www.instagram.com/cftdrop.com.br/" icon={<Instagram size={18} />} />
+            <SocialLink href="https://api.whatsapp.com/send/?phone=5516991486936&text&type=phone_number&app_absent=0" icon={<MessageSquare size={18} />} />
+            <SocialLink href="https://www.youtube.com/@CFTDROPSHIPPING-2023" icon={<Youtube size={18} />} />
           </div>
         </div>
 
